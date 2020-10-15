@@ -1,10 +1,20 @@
 public class Max {
 
-    public Integer FindMax(Integer a,Integer b,Integer c)
+    public Integer FindIntMax(Integer a,Integer b,Integer c)
     {
-        if (a >= b && a >= c)
+        if (a.compareTo(b)>0 && a.compareTo(c)>0)
            return a;
-        else if (b >= a && b >= c)
+        else if (b.compareTo(a)>0 && b.compareTo(c)>0)
+            return b;
+        else
+            return c;
+    }
+
+    public Float FindFloatMax(Float a,Float b,Float c)
+    {
+        if (a.compareTo(b)>0 && a.compareTo(c)>0)
+            return a;
+        else if (b.compareTo(a)>0 && b.compareTo(c)>0)
             return b;
         else
             return c;
