@@ -12,6 +12,5 @@ public class Max {
 
     public static void main(String[] args) {
         Max m=new Max();
-        System.out.println(m.FindMax(1,2,3));
     }
 }
