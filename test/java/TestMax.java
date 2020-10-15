@@ -5,21 +5,24 @@ import org.junit.Test;
 public class TestMax {
     Max m = new Max();
     GMax g = new GMax();
-    Integer a, b, c;
-    Float d, e, f;
-    String x, y, z;
+    Integer a, b, c, j;
+    Float d, e, f, k;
+    String x, y, z, l;
 
     @Before
     public void initialize() {
         a = 3;
         b = 2;
         c = 1;
+        j = 4;
         d = 3.00f;
         e = 2.00f;
         f = 1.00f;
+        k = 0.00f;
         x = "Hi";
-        y = "Wor";
+        y = "World";
         z = "Prajwal";
+        l = "alright";
     }
 
     @Test
@@ -78,8 +81,22 @@ public class TestMax {
     }
 
     @Test
-    public void test12MaxatThirdGeneric() { Assert.assertSame(m.FindGenericMax(x, y, z), y); }
+    public void test12MaxatThirdGeneric() {
+        Assert.assertSame(m.FindGenericMax(x, y, z), y);
+    }
 
     @Test
-    public void test13GenericClassMax() { Assert.assertSame(g.TestMaximum(a, b, c), a); }
+    public void test13GenericClassMax() {
+        Assert.assertSame(g.TestMaximum(a, b, c, j), j);
+    }
+
+    @Test
+    public void test14GenericClassMax() {
+        Assert.assertSame(g.TestMaximum(d, e, f, k), d);
+    }
+    @Test
+    public void test15GenericClassMax() {
+        Assert.assertSame(g.TestMaximum(d, e), d);
+    }
+
 }
