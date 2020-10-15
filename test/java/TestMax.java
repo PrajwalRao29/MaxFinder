@@ -6,12 +6,16 @@ public class TestMax {
     Max m = new Max();
     Integer a,b,c;
     Float d,e,f;
+    String x,y,z;
 
     @Before
     public void initialize()
     {
         a=3;b=2;c=1;
         d=3.00f;e=2.00f;f=1.00f;
+        x="Hi";
+        y="Wor";
+        z="Prajwal";
     }
     @Test
     public void test1MaxatfirstInt() {
@@ -40,5 +44,19 @@ public class TestMax {
     @Test
     public void test6MaxatThirdFloat() {
         Assert.assertSame(m.FindFloatMax(e, f, d), d);
+    }
+    @Test
+    public void test7MaxatfirstString() {
+        Assert.assertSame(m.FindStringMax(z, x, y), z);
+    }
+
+    @Test
+    public void test8MaxatSecondString() {
+        Assert.assertSame(m.FindStringMax(x, z, y), z);
+    }
+
+    @Test
+    public void test9MaxatThirdString() {
+        Assert.assertSame(m.FindStringMax(x, y, z), z);
     }
 }

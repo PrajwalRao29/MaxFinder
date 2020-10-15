@@ -20,6 +20,18 @@ public class Max {
             return c;
     }
 
+    public String FindStringMax(String a,String b,String c)
+    {
+       Integer g=a.length();
+        Integer h=b.length();
+        Integer i=c.length();
+        if((g.compareTo(FindIntMax(g,h,i))==0))
+            return a;
+        else if ((h.compareTo(FindIntMax(g,h,i))==0))
+            return b;
+        else
+            return c;
+    }
     public static void main(String[] args) {
         Max m=new Max();
     }
