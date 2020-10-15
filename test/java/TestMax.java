@@ -9,5 +9,10 @@ Max m=new Max();
 {
     Assert.assertSame(m.FindMax(3,2,1),3);
 }
+    @Test
+    public void test2MaxatSecond()
+    {
+        Assert.assertSame(m.FindMax(2,3,1),3);
+    }
 
 }
