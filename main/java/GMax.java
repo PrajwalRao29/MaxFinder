@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class GMax<T>{
     T a;
     T b;
@@ -5,13 +8,13 @@ public class GMax<T>{
 
     public static <T extends Comparable<T>> T TestMaximum(T... elements)
     {   T max=elements[0];
+        ArrayList <T> arr=new ArrayList();
         for(T e:elements) {
-            if (max.compareTo(e) < 0) {
-                max = e;
+           arr.add(e);
             }
-        }
-        printMax(max,elements);
-        return max;
+        Collections.sort(arr);
+        printMax(arr.get(arr.size()-1),elements);
+        return arr.get(arr.size()-1);
     }
     public static <T> void printMax(T max,T... elements)
     {
